@@ -55,7 +55,6 @@ async function fetchData(url, socketPath) {
     }
 }
 
-// Example usage
 const url = 'https://sourcegraph.com/search'
 const socketPath = '/tmp/https-proxy.sock'
 

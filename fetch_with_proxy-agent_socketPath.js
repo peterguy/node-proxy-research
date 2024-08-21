@@ -3,7 +3,7 @@ import fetch from 'node-fetch'
 import { ProxyAgent } from 'proxy-agent'
 
 // Define an async function to make an HTTPS request with proxy support
-async function fetchData(url, proxyUrl) {
+async function fetchData(url) {
     try {
         // Create a proxy agent
         const agent = new ProxyAgent({protocol: 'https', socketPath: '/tmp/https-proxy.sock'})
