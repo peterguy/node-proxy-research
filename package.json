@@ -1,0 +1,24 @@
+{
+  "name": "node-proxy-researcht",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "research into how to use proxies in NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^22.4.1",
+    "agent-base": "^7.1.1",
+    "http-proxy-agent": "^7.0.2",
+    "https-proxy-agent": "^7.0.5",
+    "node-fetch": "^2.7.0",
+    "proxy-agent": "^6.4.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
