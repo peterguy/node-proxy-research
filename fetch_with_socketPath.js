@@ -15,6 +15,7 @@ try {
 
 // Create the server
 const server = createServer((req, res) => {
+    console.log(`requesting ${req.url}`)
     const options = {
         hostname: req.headers.host,
         path: req.url,

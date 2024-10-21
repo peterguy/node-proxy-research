@@ -3,15 +3,23 @@ Some research into how to use proxies in NodeJS, including Unix Domain Socket pr
 
 Using [agent-base](https://www.npmjs.com/package/agent-base) and the [proxy-agents](https://github.com/TooTallNate/proxy-agents) packages.
 
-For the experiments that use a Unix Domain Socket, you can use `socat`.
+For the experiments that use a Unix Domain Socket, you can use `socat` plus `mitmproxy`.
 
 ```
-brew install socat
+brew install socat mitmproxy
 ```
 
 ```
-socat unix-listen:/tmp/https-proxy.sock,fork openssl:sourcegraph.com:443,verify=0
+mitmweb
 ```
+
+```
+socat -d -d unix-listen:~/https-proxy.sock,fork tcp:localhost:8080
+```
+
+You can run either `mtimproxy` or `mtimweb`. `mtimweb` lets you interact with the requests in a browser.
+
+The `-d -d` for `socat` turns on debug logging so you can see requests being made in the terminal.
 
 Make sure that the path for `unix-listen` - `/tmp/https-proxy.sock` matches the path used in the code.
 
